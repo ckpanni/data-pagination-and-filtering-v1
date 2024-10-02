@@ -24,19 +24,19 @@ const showPage = (list, page) => {
 
  const studentList = document.querySelector('.student-list');
  studentList.innerHTML = '';
-//  const textBlock = '';
+
 
  for (let i = 0; i < list.length; i++) {
 
    if (i >= startIndex && i < endIndex) {
      const html = `<li class="student-item cf">
                      <div class="student-details">
-                        <img class="avatar" src="${i.picture.large}" alt="Profile Picture">
-                        <h3>${i.name.first} ${i.name.last}</h3>
-                        <span class="email">${i.email}</span>
+                        <img class="avatar" src="${list[i].picture.large}" alt="Profile Picture">
+                        <h3>${i.name.first} ${list[i].name.last}</h3>
+                        <span class="email">${list[i].email}}</span>
                      </div>
                      <div class="joined-details">
-                        <span class="date">${i.registered.date}</span>
+                        <span class="date">${list[i].registered.date}</span>
                      </div>
                      </li>`;
       
